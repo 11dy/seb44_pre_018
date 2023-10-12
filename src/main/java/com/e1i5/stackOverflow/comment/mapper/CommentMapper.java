@@ -2,12 +2,9 @@ package com.e1i5.stackOverflow.comment.mapper;
 
 import com.e1i5.stackOverflow.comment.dto.CommentDto;
 import com.e1i5.stackOverflow.comment.entity.Comment;
-import com.e1i5.stackOverflow.question.dto.QuestionResponseDto;
-import com.e1i5.stackOverflow.question.entity.Question;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,7 +17,6 @@ public interface CommentMapper {
 
     @Mapping(source = "question.title", target = "questionTitle")
     @Mapping(source = "member.name", target = "authenticatedMemberName")
-//    CommentDto.Response commentToCommentResponseDto(Comment comment);
 
     default CommentDto.Response commentToCommentResponseDto(Comment comment){
         if(comment == null){

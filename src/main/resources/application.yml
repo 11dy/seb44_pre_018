@@ -17,5 +17,5 @@ mail:
     admin: ${ADMIN_MAIL}
 jwt:
   key: ${JWT_SECRET_KEY}
-  access-token-expiration-minutes: 40
-  refresh-token-expiration-minutes: 420
+  access-token-expiration-minutes: 3_600_000
+  refresh-token-expiration-minutes: 604_800_000

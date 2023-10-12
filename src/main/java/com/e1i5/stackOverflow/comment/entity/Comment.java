@@ -19,7 +19,6 @@ public class Comment extends Auditable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long commentId;
 
-//    @Column(nullable = false, columnDefinition = "TEXT CHECK (LENGTH(content) <= 500)")
     @Column(nullable = false)
     private String content;
 
@@ -34,7 +33,6 @@ public class Comment extends Auditable {
     private Question question;
 
 
-    // 댓글 수정부분 null exception 해결을 위해 초기화
     public Comment(Member member, Question question) {
         this.member = member;
         this.question = question;
@@ -65,7 +63,6 @@ public class Comment extends Auditable {
         ANSWER_COMMENT("채택된 댓글입니다."),
         ORIGIN_COMMENT("원본 댓글입니다."),
         MODIFIED_COMMENT("수정된 댓글입니다.");
-// CommentStatus 를 하나 더 만들면 테이블에서 수정과 채택이 중복되지 않을 것 같다.
 
         @Getter
         private String status;

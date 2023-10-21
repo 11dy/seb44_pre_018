@@ -14,6 +14,20 @@
 
 <br>
 
+## 👤역할
+- 댓글 CRUD API 구현
+- JWT를 통한 인증, 인가 구현
+- Interceptor 적용
+- 팀 서기 활동
+
+## 🛠️사용 기술
+- JAVA11
+- Spring Boot, Spring data JPA
+- cloudtype
+- MariaDB
+
+<br>
+
 ## ✉️ Commit Message
 
 | 이름     | 내용                                                                  |

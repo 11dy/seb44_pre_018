@@ -29,6 +29,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -55,6 +56,8 @@ public class SecurityConfiguration {
                 .and()
                 .csrf().disable()
                 .cors(withDefaults()) // corsConfigurationSource라는 이름으로 등록된 Bean을 이용 = CorsFilter를 적용
+                .cors().configurationSource(corsConfigurationSource())
+                .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 //                .and()//이 아래는 oauth2
 //                .oauth2Login()
@@ -96,11 +99,17 @@ public class SecurityConfiguration {
 
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList("*"));// 모든 출처(Origin)에 대해 스크립트 기반의 HTTP 통신을 허용하도록 설정
-        corsConfiguration.setAllowedMethods(Arrays.asList("GET","POST","PATCH","DELETE"));// 파라미터로 지정한 HTTP Method에 대한 HTTP 통신을 허용
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(); // CorsConfigurationSource 인터페이스의 구현 클래스인 UrlBasedCorsConfigurationSource 클래스의 객체를 생성
-        source.registerCorsConfiguration("/**", corsConfiguration);  // 모든 URL에 앞에서 구성한 CORS 정책(CorsConfiguration)을 적용
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("*", "https://port-0-e1i5-stackoverflow-ac2nlldvu1be.sel3.cloudtype.app")); // 특정 도메인 허용
+        configuration.addAllowedMethod("*");
+        configuration.addAllowedHeader("*");
+        configuration.addExposedHeader("Authorization");
+        configuration.setAllowCredentials(true);
+        configuration.setMaxAge(3600L);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+
         return source;
     }
 

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="feat/ dockerfile" />
+=======
+    <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현" />
+>>>>>>> 5c63ec4 ([fix] cors error)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,7 +229,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687835214827</updated>
-      <workItem from="1697092182050" duration="1825000" />
+      <workItem from="1697092182050" duration="2674000" />
     </task>
     <task id="LOCAL-00001" summary="feat/ backend 누락파일 업로드">
       <created>1687835292785</created>
@@ -258,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692944457657</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현">
+      <created>1697094858211</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697094858211</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +283,8 @@
     <MESSAGE value="feat/ dir change" />
     <MESSAGE value="feat/ mariadb change" />
     <MESSAGE value="feat/ dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat/ dockerfile" />
+    <MESSAGE value="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/seb44_pre_018_final$Tests_in__seb44_pre_018_final_test_.ic" NAME="Tests in 'seb44_pre_018_final.test' Coverage Results" MODIFIED="1701005912056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

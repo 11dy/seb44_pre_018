@@ -1,6 +1,7 @@
 package com.e1i5.stackOverflow.auth.interceptor;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -15,7 +16,15 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry){
         registry.addInterceptor(jwtInterceptor)
-                .addPathPatterns("/**"); // 모든 경로에 interceptor 적용
-//                .excludePathPatterns("/")  // 경로 설정 (이 경로는 제외)
+                .addPathPatterns("/**");
+    }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://stackoverflow-018.s3-website.ap-northeast-2.amazonaws.com", "http://localhost:3000")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*");
+
     }
 }

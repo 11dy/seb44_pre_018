@@ -100,7 +100,7 @@ public class SecurityConfiguration {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("*", "https://port-0-e1i5-stackoverflow-ac2nlldvu1be.sel3.cloudtype.app")); // 특정 도메인 허용
+        configuration.setAllowedOrigins(List.of("*", "http://stackoverflow-pre-018.s3-website.ap-northeast-2.amazonaws.com")); // 특정 도메인 허용
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
         configuration.addExposedHeader("Authorization");

@@ -36,7 +36,7 @@ public class CommentController {
 
     }
 
-//    // 댓글 조회 - 비회원도 조회 가능
+    // 댓글 조회 - 비회원도 조회 가능
 //    @GetMapping("/{question-id}")
 //    public ResponseEntity getCommentList(@PathVariable("question-id") @Positive long questionId,
 //                                                        @RequestParam("page") int page,

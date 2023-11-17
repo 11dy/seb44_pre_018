@@ -47,14 +47,33 @@ public class CommentService {
     //댓글 조회 refactor
     @Transactional(readOnly= true)
     public Object refactorFindAll(Long questionId, int page, int size) {
-        Pageable pageable = PageRequest.of(page-1, size);
 
-        Page<Comment> comments = commentRepository.findAllByQuestionQuestionId(questionId, pageable);
-        List<Comment> commentList = comments.getContent();
+//        Pageable pageable = PageRequest.of(page-1, size);
+//
+//        Page<Comment> comments = commentRepository.findAllByQuestionQuestionId(questionId, pageable);
+//        List<Comment> commentList = comments.getContent();
+//
+//        return new MultiResponseDto<>(
+//                mapper.commentsToCommentResponseDtos(commentList),
+//                comments);
+        try {
+            Pageable pageable = PageRequest.of(page - 1, size);
 
-        return new MultiResponseDto<>(
-                mapper.commentsToCommentResponseDtos(commentList),
-                comments);
+            Page<Comment> comments = commentRepository.findAllByQuestionQuestionId(questionId, pageable);
+
+            if (comments == null || comments.getContent() == null) {
+                throw new NullPointerException("Comments or content is null");
+            }
+
+            List<Comment> commentList = comments.getContent();
+
+            return new MultiResponseDto<>(
+                    mapper.commentsToCommentResponseDtos(commentList),
+                    comments);
+        } catch (Exception e) {
+            logger.info("예외발생");
+            throw new NullPointerException("An exception occurred");
+        }
     }
 
 

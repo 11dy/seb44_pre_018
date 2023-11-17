@@ -5,10 +5,61 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="feat/ dockerfile" />
 =======
     <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현" />
 >>>>>>> 5c63ec4 ([fix] cors error)
+=======
+    <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현">
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/e1i5/stackOverflow/auth/jwt/JwtTokenizerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/e1i5/stackOverflow/comment/service/CommentServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/e1i5/stackOverflow/member/MemberRepositoryTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/com/e1i5/stackOverflow/member/MemberServiceTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.e1i5.stackOverflow.comment.service.CommentServiceTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.e1i5.stackOverflow.comment.service.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.e1i5.stackOverflow.comment.service.CommentServiceTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/e1i5/stackOverflow/comment/service/CommentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/dto/CommentDto$Patch.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/dto/CommentDto$Patch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/dto/CommentDto$Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/dto/CommentDto$Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/dto/CommentDto$Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/dto/CommentDto$Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/comment/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/question/mapper/QuestionMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/question/mapper/QuestionMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/member/mapper/MemberMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/member/mapper/MemberMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/question/mapper/QuestionMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/question/mapper/QuestionMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/questionVote/mapper/QuestionVoteMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/questionVote/mapper/QuestionVoteMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/dto/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/dto/CommentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/e1i5/stackOverflow/member/MemberServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/e1i5/stackOverflow/member/MemberServiceTest.java" afterDir="false" />
+    </list>
+>>>>>>> 321b90b (add CommentServiceTest)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +106,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -74,35 +126,90 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "git-widget-placeholder": "Rebasing main",
+=======
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+>>>>>>> 321b90b (add CommentServiceTest)
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "spring.configuration.checksum": "dc44f07bfeec0e4d7e17735036f3f832",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.stackOverflow [clean]">
-    <configuration name="StackOverflowApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.e1i5.stackOverflow.StackOverflowApplication" />
-      <module name="seb44_pre_018.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.e1i5.stackOverflow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.e1i5.stackOverflow.comment.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.CommentServiceTest.refactorFindAll">
+    <configuration name="CommentServiceTest.createComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.createComment&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="CommentServiceTest.refactorFindAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.refactorFindAll&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
     </configuration>
     <configuration name="MemberRepositoryTest.saveMemberTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -152,34 +259,19 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="seb44_pre_018 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="stackOverflow [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="MARIADB_HOST" value="localhost:3360" />
+            <entry key="MARIADB_PASSWORD" value="4317" />
+            <entry key="MARIADB_USER" value="root" />
+          </map>
+        </option>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -197,6 +289,12 @@
       <method v="2" />
     </configuration>
     <configuration name="StackOverflowApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="MARIADB_HOST" value="localhost:3360" />
+        <env name="MARIADB_PASSWORD" value="4317" />
+        <env name="MARIADB_USER" value="root" />
+        <env name="ADMIN_MAIL" value="admin@gmail.com" />
+      </envs>
       <module name="seb44_pre_018_final.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.e1i5.stackOverflow.StackOverflowApplication" />
       <method v="2">
@@ -204,20 +302,27 @@
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Application.StackOverflowApplication (1)" />
       <item itemvalue="Gradle.MemberRepositoryTest.saveMemberTest" />
       <item itemvalue="Gradle.MemberServiceTest" />
       <item itemvalue="Gradle.seb44_pre_018 [dependencies]" />
+=======
+      <item itemvalue="Gradle.CommentServiceTest.createComment" />
+      <item itemvalue="Gradle.CommentServiceTest.refactorFindAll" />
+      <item itemvalue="Gradle.MemberRepositoryTest.saveMemberTest" />
+      <item itemvalue="Gradle.MemberServiceTest" />
+>>>>>>> 321b90b (add CommentServiceTest)
       <item itemvalue="Gradle.stackOverflow [clean]" />
       <item itemvalue="Spring Boot.StackOverflowApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CommentServiceTest.refactorFindAll" />
+        <item itemvalue="Gradle.CommentServiceTest.createComment" />
         <item itemvalue="Gradle.stackOverflow [clean]" />
         <item itemvalue="Gradle.MemberRepositoryTest.saveMemberTest" />
         <item itemvalue="Gradle.MemberServiceTest" />
-        <item itemvalue="Gradle.seb44_pre_018 [dependencies]" />
-        <item itemvalue="Application.StackOverflowApplication (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -230,6 +335,14 @@
       <option name="presentableId" value="Default" />
       <updated>1687835214827</updated>
       <workItem from="1697092182050" duration="2674000" />
+      <workItem from="1697966719720" duration="3589000" />
+      <workItem from="1698605112307" duration="924000" />
+      <workItem from="1699444337707" duration="1294000" />
+      <workItem from="1699551918251" duration="1031000" />
+      <workItem from="1699553051542" duration="25000" />
+      <workItem from="1699598741430" duration="958000" />
+      <workItem from="1699789417648" duration="11987000" />
+      <workItem from="1700142432514" duration="4590000" />
     </task>
     <task id="LOCAL-00001" summary="feat/ backend 누락파일 업로드">
       <created>1687835292785</created>

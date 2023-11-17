@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.e1i5.stackOverflow.comment.service.CommentServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-16T15:14:53" hostname="DESKTOP-BNDIII9" time="1.427">
+  <properties/>
+  <testcase name="댓글조회 test" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="1.427"/>
+  <system-out><![CDATA[00:14:55.111 [Test worker] INFO com.e1i5.stackOverflow.comment.service.CommentService - 예외발생
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

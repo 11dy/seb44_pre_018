@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-10-22T18:38:14+0900",
+    date = "2023-11-12T22:21:26+0900",
     comments = "version: 1.5.1.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.5.1.jar, environment: Java 11.0.18 (Azul Systems, Inc.)"
 )
 @Component
@@ -67,7 +67,9 @@ public class QuestionMapperImpl implements QuestionMapper {
         imagePath = commentMemberProfileImagePath( comment );
         commentLikeCount = comment.getLikeCount();
         commentDislikeCount = comment.getDislikeCount();
-        commentId = comment.getCommentId();
+        if ( comment.getCommentId() != null ) {
+            commentId = comment.getCommentId();
+        }
         content = comment.getContent();
         choose = comment.isChoose();
         createdAt = comment.getCreatedAt();

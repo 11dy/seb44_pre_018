@@ -21,9 +21,9 @@ public class CommentDto {
     @AllArgsConstructor
     public static class Post {
 
-        private long questionId;
+        private Long questionId;
 
-        private long authenticatedMemberId;
+        private Long authenticatedMemberId;
 
         @NotBlank(message = "내용을 작성해주세요")
         private String content;
@@ -44,27 +44,27 @@ public class CommentDto {
 
         @Setter
         @NotNull
-        private long commentId;
+        private Long commentId;
 
         @Setter
         @NotNull
-        private long questionId;
+        private Long questionId;
 
         @Setter
         @NotNull
-        private long authenticatedMemberId;
+        private Long authenticatedMemberId;
 
         @NotBlank(message = "내용을 적어주세요.")
         private String content;
 
-        public void setQuestionId(long questionId) {
+        public void setQuestionId(Long questionId) {
             this.questionId = questionId;
         }
 
-        public void setCommentId(long commentId){
+        public void setCommentId(Long commentId){
             this.commentId = commentId;
         }
-        public void setAuthenticatedMemberId(long authenticatedMemberId){
+        public void setAuthenticatedMemberId(Long authenticatedMemberId){
             this.authenticatedMemberId = authenticatedMemberId;
         }
 
@@ -74,9 +74,9 @@ public class CommentDto {
     @Setter
     @AllArgsConstructor
     public static class Response {
-        private long commentId; // 댓글 id
-        private long memberId;
-        private long questionId;
+        private Long commentId; // 댓글 id
+        private Long memberId;
+        private Long questionId;
         private String questionTitle;
         private String authenticatedMemberName;
         private String content;  // 댓글 내용

@@ -1,5 +1,6 @@
 package com.e1i5.stackOverflow.comment.service;
 
+import com.e1i5.stackOverflow.comment.dto.CommentDto;
 import com.e1i5.stackOverflow.comment.entity.Comment;
 import com.e1i5.stackOverflow.comment.mapper.CommentMapper;
 import com.e1i5.stackOverflow.dto.MultiResponseDto;

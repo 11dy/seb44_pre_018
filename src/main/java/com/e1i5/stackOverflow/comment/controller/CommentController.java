@@ -126,6 +126,7 @@ public class CommentController {
     }
 
 
+
     // 댓글 삭제 - 질문글 작성자와 답변 작성자 둘 다 삭제가 가능하다.
     @DeleteMapping("/delete/{comment-id}")
     public ResponseEntity deleteComment(@PathVariable("comment-id") @Positive Long commentId){

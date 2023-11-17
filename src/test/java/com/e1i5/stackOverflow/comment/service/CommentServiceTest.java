@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
@@ -24,6 +25,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
@@ -34,7 +36,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
@@ -95,22 +97,43 @@ class CommentServiceTest {
     }
 
     @Test
+    @DisplayName("댓글등록 test")
+    @Transactional
     void createComment() {
         // given
+
         Comment commentToCreate = new Comment();
-        commentToCreate.setCommentId(2L);
+        commentToCreate.setMember(new Member());  // 수정: Member 객체 초기화
+        commentToCreate.getMember().setMemberId(1L);
+        commentToCreate.setQuestion(new Question());  // 수정: Question 객체 초기화
+        commentToCreate.getQuestion().setQuestionId(1L);
         commentToCreate.setContent("This is a new comment");
         commentToCreate.setCommentStatus(Comment.CommentStatus.ORIGIN_COMMENT);
 
-        // when
-        when(commentRepository.save(any(Comment.class))).thenReturn(commentToCreate);
+        Member member = new Member();
+        member.setMemberId(1L);
 
+        Question question = new Question();
+        question.setQuestionId(1L);
+
+        // when
+        when(memberService.findVerifiedMemberById(commentToCreate.getMember().getMemberId())).thenReturn(member);
+        when(questionService.findVerifiedQuestion(commentToCreate.getQuestion().getQuestionId())).thenReturn(question);
+        when(commentRepository.save(commentToCreate)).thenReturn(commentToCreate);
+
+        // 실행
         Comment createdComment = commentService.createComment(commentToCreate, 1L, 1L);
 
         // then
-        assertNotNull(createdComment);
+//        assertNotNull(createdComment);
         assertEquals(commentToCreate.getContent(), createdComment.getContent());
-        assertEquals(Comment.CommentStatus.ORIGIN_COMMENT, createdComment.getCommentStatus());
+        assertEquals(commentToCreate.getCommentStatus(), createdComment.getCommentStatus());
+
+        // 추가적인 검증 로직을 필요에 따라 작성
+        verify(memberService, times(1)).findVerifiedMemberById(commentToCreate.getMember().getMemberId());
+        verify(questionService, times(1)).findVerifiedQuestion(commentToCreate.getQuestion().getQuestionId());
+        verify(commentRepository, times(1)).save(commentToCreate);
+
     }
 
     @Test
@@ -118,6 +141,7 @@ class CommentServiceTest {
     }
 
     @Test
+    @DisplayName("작성자 확인 실패 테스트")
     void findVerifiedComment() {
     }
 }

@@ -2,17 +2,22 @@ package com.e1i5.stackOverflow.comment.mapper;
 
 import com.e1i5.stackOverflow.comment.dto.CommentDto;
 import com.e1i5.stackOverflow.comment.entity.Comment;
+import lombok.RequiredArgsConstructor;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.ReportingPolicy;
+import org.springframework.stereotype.Component;
 
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @Mapper(componentModel = "spring")
 public interface CommentMapper {
+    //post
     Comment commentPostDtoToComment(CommentDto.Post requestBody);
+
+    //patch
     Comment commentPatchDtoToComment(CommentDto.Patch requestBody);
 
     @Mapping(source = "question.title", target = "questionTitle")

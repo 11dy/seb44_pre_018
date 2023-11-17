@@ -33,11 +33,6 @@ public class Comment extends Auditable {
     private Question question;
 
 
-    public Comment(Member member, Question question) {
-        this.member = member;
-        this.question = question;
-    }
-
     private boolean choose; // f = comment t = answercomment
 
     private int likeCount;
@@ -52,8 +47,6 @@ public class Comment extends Auditable {
     @Enumerated(value = EnumType.STRING)
     @Column(length = 20, nullable = false)
     private CommentStatus commentStatus2 = CommentStatus.ORIGIN_COMMENT;
-
-
 
 
     public enum CommentStatus{

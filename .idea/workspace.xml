@@ -14,12 +14,9 @@
     <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/comment/mapper/CommentMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/question/mapper/QuestionMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/e1i5/stackOverflow/question/mapper/QuestionMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/comment/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/e1i5/stackOverflow/comment/service/CommentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/e1i5/stackOverflow/comment/service/CommentServiceTest.java" afterDir="false" />
     </list>
@@ -153,8 +150,8 @@
       <recent name="com.e1i5.stackOverflow.comment.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CommentServiceTest.createComment">
-    <configuration name="CommentServiceTest.createComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CommentServiceTest.updateComment">
+    <configuration name="CommentServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -167,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.createComment&quot;" />
+            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -178,7 +175,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="CommentServiceTest.refactorFindAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentServiceTest.createComment_guest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -191,7 +188,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.refactorFindAll&quot;" />
+            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.createComment_guest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,7 +199,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="MemberRepositoryTest.saveMemberTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentServiceTest.createComment_not_exist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,7 +212,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.e1i5.stackOverflow.member.MemberRepositoryTest.saveMemberTest&quot;" />
+            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.createComment_not_exist&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -226,7 +223,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="MemberServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CommentServiceTest.updateComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -239,7 +236,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.e1i5.stackOverflow.member.MemberServiceTest&quot;" />
+            <option value="&quot;com.e1i5.stackOverflow.comment.service.CommentServiceTest.updateComment&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -250,15 +247,8 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="stackOverflow [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MemberRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
-        <option name="env">
-          <map>
-            <entry key="MARIADB_HOST" value="localhost:3360" />
-            <entry key="MARIADB_PASSWORD" value="4317" />
-            <entry key="MARIADB_USER" value="root" />
-          </map>
-        </option>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
@@ -268,15 +258,17 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.e1i5.stackOverflow.member.MemberRepositoryTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="StackOverflowApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -294,6 +286,7 @@
     </configuration>
     <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <item itemvalue="Application.StackOverflowApplication (1)" />
       <item itemvalue="Gradle.MemberRepositoryTest.saveMemberTest" />
       <item itemvalue="Gradle.MemberServiceTest" />
@@ -305,15 +298,22 @@
       <item itemvalue="Gradle.MemberServiceTest" />
 >>>>>>> 321b90b (add CommentServiceTest)
       <item itemvalue="Gradle.stackOverflow [clean]" />
+=======
+      <item itemvalue="Gradle.CommentServiceTest" />
+      <item itemvalue="Gradle.CommentServiceTest.createComment_guest" />
+      <item itemvalue="Gradle.CommentServiceTest.createComment_not_exist" />
+      <item itemvalue="Gradle.CommentServiceTest.updateComment" />
+      <item itemvalue="Gradle.MemberRepositoryTest" />
+>>>>>>> 9b942c6 (add testcode(create, update))
       <item itemvalue="Spring Boot.StackOverflowApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CommentServiceTest.createComment" />
-        <item itemvalue="Gradle.CommentServiceTest.refactorFindAll" />
-        <item itemvalue="Gradle.stackOverflow [clean]" />
-        <item itemvalue="Gradle.MemberRepositoryTest.saveMemberTest" />
-        <item itemvalue="Gradle.MemberServiceTest" />
+        <item itemvalue="Gradle.CommentServiceTest.updateComment" />
+        <item itemvalue="Gradle.CommentServiceTest.createComment_not_exist" />
+        <item itemvalue="Gradle.CommentServiceTest.createComment_guest" />
+        <item itemvalue="Gradle.CommentServiceTest" />
+        <item itemvalue="Gradle.MemberRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +334,8 @@
       <workItem from="1699598741430" duration="958000" />
       <workItem from="1699789417648" duration="11987000" />
       <workItem from="1700142432514" duration="7642000" />
-      <workItem from="1700222648605" duration="9158000" />
+      <workItem from="1700222648605" duration="9873000" />
+      <workItem from="1700372588321" duration="11835000" />
     </task>
     <task id="LOCAL-00001" summary="feat/ backend 누락파일 업로드">
       <created>1687835292785</created>

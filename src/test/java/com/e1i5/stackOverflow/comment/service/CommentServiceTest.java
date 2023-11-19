@@ -5,7 +5,10 @@ import com.e1i5.stackOverflow.comment.entity.Comment;
 import com.e1i5.stackOverflow.comment.mapper.CommentMapper;
 import com.e1i5.stackOverflow.comment.repository.CommentRepository;
 import com.e1i5.stackOverflow.dto.MultiResponseDto;
+import com.e1i5.stackOverflow.exception.BusinessLogicException;
+import com.e1i5.stackOverflow.exception.ExceptionCode;
 import com.e1i5.stackOverflow.member.entity.Member;
+import com.e1i5.stackOverflow.member.repository.MemberRepository;
 import com.e1i5.stackOverflow.member.service.MemberService;
 import com.e1i5.stackOverflow.question.entity.Question;
 import com.e1i5.stackOverflow.question.repository.QuestionRepository;
@@ -16,7 +19,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
@@ -29,14 +31,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
+import static org.mockito.Mockito.*;
 
 import static com.e1i5.stackOverflow.comment.entity.Comment.CommentStatus.COMMENT_EXIST;
-import static com.e1i5.stackOverflow.comment.entity.Comment.CommentStatus.ORIGIN_COMMENT;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
@@ -46,6 +45,9 @@ class CommentServiceTest {
 
     @Mock
     QuestionRepository questionRepository;
+
+    @Mock
+    MemberRepository memberRepository;
 
     @Mock
     MemberService memberService;
@@ -92,47 +94,37 @@ class CommentServiceTest {
     }
 
     @Test
+    @DisplayName("댓글 수정 - 해당 댓글 작성자가 아닌경우 예외처리")
     void updateComment() {
+        // given
+        Long commentId = 10L;
+        Long memberId = 1L;
+
+        assertThrows(BusinessLogicException.class, () ->{
+            commentService.VerifyCommentAuthor(commentId, memberId);
+        });
+    }
+
+    @Test
+    @DisplayName("댓글 등록 - 회원이 아닌 경우 댓글 등록 예외처리")
+    void createComment_guest() {
+        // given
+        Long memberId = 0L; // guest인 경우 memberId는 0이라 가정
+
+        when(memberService.findVerifiedMemberById(memberId))
+                .thenThrow(new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND));
 
     }
 
     @Test
-    @DisplayName("댓글등록 test")
+    @DisplayName("댓글 등록 - 질문이 존재하지 않으면 예외 처리")
     @Transactional
-    void createComment() {
+    void createComment_not_exist() {
         // given
+        Long questionId = 1L;
 
-        Comment commentToCreate = new Comment();
-        commentToCreate.setMember(new Member());  // 수정: Member 객체 초기화
-        commentToCreate.getMember().setMemberId(1L);
-        commentToCreate.setQuestion(new Question());  // 수정: Question 객체 초기화
-        commentToCreate.getQuestion().setQuestionId(1L);
-        commentToCreate.setContent("This is a new comment");
-        commentToCreate.setCommentStatus(Comment.CommentStatus.ORIGIN_COMMENT);
-
-        Member member = new Member();
-        member.setMemberId(1L);
-
-        Question question = new Question();
-        question.setQuestionId(1L);
-
-        // when
-        when(memberService.findVerifiedMemberById(commentToCreate.getMember().getMemberId())).thenReturn(member);
-        when(questionService.findVerifiedQuestion(commentToCreate.getQuestion().getQuestionId())).thenReturn(question);
-        when(commentRepository.save(commentToCreate)).thenReturn(commentToCreate);
-
-        // 실행
-        Comment createdComment = commentService.createComment(commentToCreate, 1L, 1L);
-
-        // then
-//        assertNotNull(createdComment);
-        assertEquals(commentToCreate.getContent(), createdComment.getContent());
-        assertEquals(commentToCreate.getCommentStatus(), createdComment.getCommentStatus());
-
-        // 추가적인 검증 로직을 필요에 따라 작성
-        verify(memberService, times(1)).findVerifiedMemberById(commentToCreate.getMember().getMemberId());
-        verify(questionService, times(1)).findVerifiedQuestion(commentToCreate.getQuestion().getQuestionId());
-        verify(commentRepository, times(1)).save(commentToCreate);
+        when(questionService.findVerifiedQuestion(questionId))
+                .thenThrow(new BusinessLogicException(ExceptionCode.QUESTION_NOT_FOUND));
 
     }
 

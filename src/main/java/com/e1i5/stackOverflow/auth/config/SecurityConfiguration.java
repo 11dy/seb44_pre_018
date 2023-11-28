@@ -72,7 +72,7 @@ public class SecurityConfiguration {
                 .and()
                 .apply(new CustomFilterConfigurer())
                 .and()
-                .authorizeHttpRequests(authorize -> authorize // > 잘 작동하지 않는 듯
+                .authorizeHttpRequests(authorize -> authorize
                         .antMatchers(HttpMethod.POST, "/member/signup").permitAll()
                         .antMatchers(HttpMethod.PATCH, "/member/update").hasRole("USER") // 회원수정
                         .antMatchers(HttpMethod.GET, "/member").hasRole("ADMIN") // getMebers

@@ -18,7 +18,6 @@ import java.util.Optional;
         * - Custom UserDetails 사용
         * - User Role을 DB에서 조회한 후, HelloAuthorityUtils로 Spring Security에게 Role 정보 제공
         * - jwt 자격 증명을 위한 로그인 인증 구현에 사용
-        * - Hello, Spring Security로 알아보는 Spring Security의 기본 구조 (2)’에서 학습했던 HelloUserDetailsService(코드 4-28)와 거의 동일
         */
 @Component
 public class MemberDetailsService implements UserDetailsService {

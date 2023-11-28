@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.e1i5.stackOverflow.auth.jwt.JwtTokenizerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-11-26T13:39:00" hostname="DESKTOP-BNDIII9" time="3.766">
+  <properties/>
+  <testcase name="encodeBase64SecretKeyTest()" classname="com.e1i5.stackOverflow.auth.jwt.JwtTokenizerTest" time="0.067"/>
+  <testcase name="generateAccessTokenTest()" classname="com.e1i5.stackOverflow.auth.jwt.JwtTokenizerTest" time="1.849"/>
+  <testcase name="does not throw any Exception when jws verify" classname="com.e1i5.stackOverflow.auth.jwt.JwtTokenizerTest" time="0.291"/>
+  <testcase name="generateRefreshTokenTest()" classname="com.e1i5.stackOverflow.auth.jwt.JwtTokenizerTest" time="0.008"/>
+  <testcase name="throw ExpiredJwtException when jws verify" classname="com.e1i5.stackOverflow.auth.jwt.JwtTokenizerTest" time="1.539"/>
+  <system-out><![CDATA[a2V2aW4xMjM0MTIzNDEyMzQxMjM0MTIzNDEyMzQxMjM0
+eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJVU0VSIl0sIm1lbWJlcklkIjoxLCJzdWIiOiJ0ZXN0IGFjY2VzcyB0b2tlbiIsImlhdCI6MTcwMTAwNTk0MCwiZXhwIjoxNzAxMDA2NTQwfQ.wYs_LgbFBr7hI_CNYUGGn5HUgGt344VuL_slaxUq3FU
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDEwMDU5NDIsImV4cCI6MTcwMTA5MjM0Mn0.21KYFoi_BxBktlBATC4jNi_XN18Va6jk7BsJn0Fic3o
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.e1i5.stackOverflow.comment.service.CommentServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-11-19T09:08:51" hostname="DESKTOP-BNDIII9" time="1.041">
+<testsuite name="com.e1i5.stackOverflow.comment.service.CommentServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-11-26T13:39:04" hostname="DESKTOP-BNDIII9" time="2.53">
   <properties/>
-  <testcase name="댓글 수정 - 해당 댓글 작성자가 아닌경우 예외처리" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.99"/>
-  <testcase name="댓글조회 test" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.034"/>
-  <testcase name="회원이 아닌 경우 댓글 등록 예외처리" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.004"/>
-  <testcase name="deleteComment()" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.002"/>
-  <testcase name="작성자 확인 실패 테스트" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.002"/>
-  <testcase name="질문이 존재하지 않으면 예외 처리" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.001"/>
-  <system-out><![CDATA[18:08:52.032 [Test worker] INFO com.e1i5.stackOverflow.comment.service.CommentService - 예외발생
+  <testcase name="댓글 수정 - 해당 댓글 작성자가 아닌경우 예외처리" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="2.392"/>
+  <testcase name="댓글조회 test" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.081"/>
+  <testcase name="댓글 등록 - 회원이 아닌 경우 댓글 등록 예외처리" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.013"/>
+  <testcase name="deleteComment()" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.005"/>
+  <testcase name="작성자 확인 실패 테스트" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.011"/>
+  <testcase name="댓글 등록 - 질문이 존재하지 않으면 예외 처리" classname="com.e1i5.stackOverflow.comment.service.CommentServiceTest" time="0.014"/>
+  <system-out><![CDATA[22:39:06.610 [Test worker] INFO com.e1i5.stackOverflow.comment.service.CommentService - 예외발생
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

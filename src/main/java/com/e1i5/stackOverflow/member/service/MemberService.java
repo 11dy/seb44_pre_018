@@ -52,7 +52,7 @@ public class MemberService {
         member.setPassword(passwordEncoding(member.getPassword()));// 암호화된 비밀번호를 member의 비밀번호 필드에 저장
         // db에 저장되는 비밀번호는 실제 비밀번호의 암호화된 형태로 저장
 
-        // 추가: DB에 User Role 저장, 사용자 권한 정보 생성
+        // DB에 User Role 저장, 사용자 권한 정보 생성
         List<String> roles = authorityUtils.createRoles(member.getEmail());// 사용자 이메일 기반으로 사용자 역할을 생성, 저장
         member.setRoles(roles);// member 객체의 역할 필드에 역할 리스트 설정
 

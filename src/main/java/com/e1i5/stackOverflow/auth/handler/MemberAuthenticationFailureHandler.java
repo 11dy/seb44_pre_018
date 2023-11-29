@@ -14,12 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *우리가 직접 정의하는 Custom AuthenticationFailureHandler는 (1)과 같이 AuthenticationFailureHandler 인터페이스를 구현해야 합니다.
- * AuthenticationSuccessHandler 인터페이스에는 onAuthenticationFailure() 추상 메서드가 정의되어 있으며, onAuthenticationFailure() 메서드를 구현해서 추가 처리를 하면 됩니다.
- *
- *
- *HttpStatus.UNAUTHORIZED(401) 상태 코드는 인증에 실패할 경우 전달할 수 있는 HTTP status라는 것을 기억하기 바랍니다.
- *ErrorResponse 클래스가 기억나지 않는다면 [Spring MVC] 예외 처리 유닛을 참고
+ *로그인 인증 실패 시, 추가 작업 진행하는 구현클래스
  * */
 
 @Slf4j

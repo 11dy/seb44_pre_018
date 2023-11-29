@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * */
 @Component
 public class CustomAuthorityUtils {
-    @Value("${mail.address.admin}") // yml에 정의된 프로퍼티의 값을 클래스 내에서 사용가능하다.
+    @Value("${mail.address.admin}")
     private String adminMailAddress;
 
     private final List<GrantedAuthority> ADMIN_ROLES = AuthorityUtils.createAuthorityList("ROLE_ADMIN", "ROLE_USER");

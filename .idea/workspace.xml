@@ -12,23 +12,8 @@
 >>>>>>> 5c63ec4 ([fix] cors error)
 =======
     <list default="true" id="ec2fb19f-b91e-4744-873a-a8508d6d21ad" name="Changes" comment="[refactor] comment 리팩토링 &#10;[feat] healthCheck 기능 구현">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/stackOverflow.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/stackOverflow.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/auth/userdetails/MemberDetailsService$MemberDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/auth/userdetails/MemberDetailsService$MemberDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/auth/userdetails/MemberDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/e1i5/stackOverflow/auth/userdetails/MemberDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/filter/JwtVerificationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/filter/JwtVerificationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/handler/MemberAuthenticationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/handler/MemberAuthenticationFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/handler/MemberAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/handler/MemberAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/interceptor/JwtInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/utils/CustomAuthorityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/auth/utils/CustomAuthorityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/e1i5/stackOverflow/member/service/MemberService.java" afterDir="false" />
     </list>
 >>>>>>> 321b90b (add CommentServiceTest)
     <option name="SHOW_DIALOG" value="false" />
@@ -355,7 +340,7 @@
       <workItem from="1700760348737" duration="21000" />
       <workItem from="1701005869781" duration="194000" />
       <workItem from="1701187729531" duration="4605000" />
-      <workItem from="1701244293119" duration="10079000" />
+      <workItem from="1701244293119" duration="13179000" />
     </task>
     <task id="LOCAL-00001" summary="feat/ backend 누락파일 업로드">
       <created>1687835292785</created>

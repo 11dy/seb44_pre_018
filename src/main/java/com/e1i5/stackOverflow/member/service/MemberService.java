@@ -46,7 +46,7 @@ public class MemberService {
         this.authorityUtils = authorityUtils;
     }
 
-    // 회원가입, 로그인 기능을 공유하는 메서드
+
     public Member signupMember(Member member){
         verifyExistsEmail(member.getEmail());
         member.setPassword(passwordEncoding(member.getPassword()));// 암호화된 비밀번호를 member의 비밀번호 필드에 저장

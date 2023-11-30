@@ -56,18 +56,16 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         String accessToken = delegateAccessToken(member); // delegateAccessToken(member) 메서드를 이용해 Access Token을 생성합니다.
         String refreshToken = delegateRefreshToken(member); // delegateRefreshToken(member) 메서드를 이용해 Refresh Token을 생성합니다.
 
-        response.setHeader("Authorization", "Bearer " + accessToken); // response header(Authorization)에 Access Token을 추가합니다. Access Token은 클라이언트 측에서 백엔드
-        // 애플리케이션 측에 요청을 보낼 때마다 request header에 추가해서 클라이언트 측의 자격을 증명하는 데 사용됩니다.
-        response.setHeader("Refresh", refreshToken); // response header(Refresh)에 Refresh Token을 추가합니다. Refresh Token은 Access Token이 만료될 경우,
-        // 클라이언트 측이 Access Token을 새로 발급받기 위해 클라이언트에게 추가적으로 제공될 수 있으며 Refresh Token을 Access Token과 함께 클라이언트에게 제공할지 여부는 애플리케이션의 요구 사항에 따라 달라질 수 있습니다.
+        response.setHeader("Authorization", "Bearer " + accessToken);
+        response.setHeader("Refresh", refreshToken);
 
-        this.getSuccessHandler().onAuthenticationSuccess(request, response, authResult);  // 추가 > V3에서 적용, AuthenticationSuccessHandler의 onAuthenticationSuccess() 메서드를 호출
+        this.getSuccessHandler().onAuthenticationSuccess(request, response, authResult);
     }
 
     // 토큰을 생성하는 구체적인 로직
     private String delegateAccessToken(Member member) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("memberId", member.getMemberId());  // 식별자도 포함.
+        claims.put("memberId", member.getMemberId());  // 사용자 식별자 포함
         claims.put("username", member.getEmail());
         claims.put("roles", member.getRoles());
 
@@ -81,7 +79,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         return accessToken;
     }
 
-    //
+
     private String delegateRefreshToken(Member member) {
         String subject = member.getEmail();
         Date expiration = jwtTokenizer.getTokenExpiration(jwtTokenizer.getRefreshTokenExpirationMinutes());

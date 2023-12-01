@@ -72,6 +72,7 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
         return claims;
     }
 
+
     // claims map에서 사용자 정보 추출 후 Spring Security의 Authentication객체 생성, 이를 SecurityContextHolder에 설정
     private void setAuthenticationToContext(Map<String, Object> claims) {
         String username = (String) claims.get("username");

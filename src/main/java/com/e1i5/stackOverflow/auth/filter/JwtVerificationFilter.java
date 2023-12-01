@@ -4,6 +4,7 @@ import com.e1i5.stackOverflow.auth.jwt.JwtTokenizer;
 import com.e1i5.stackOverflow.auth.utils.CustomAuthorityUtils;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.security.SignatureException;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -24,15 +25,16 @@ import java.util.Map;
  *클라이언트에서 JWT를 이용해 자격 증명이 필요한 리소스에 대한 request 전송 시, request header를 통해 전달받은 JWT를 서버 측에서 검증하는 기능을 구현
  * */
 @Slf4j
+@RequiredArgsConstructor
 public class JwtVerificationFilter extends OncePerRequestFilter {
     private final JwtTokenizer jwtTokenizer;
     private final CustomAuthorityUtils authorityUtils;
 
-    public JwtVerificationFilter(JwtTokenizer jwtTokenizer, // JwtTokenizer는 JWT를 검증하고 Claims(토큰에 포함된 정보)를 얻는 데 사용됩니다.
-                                 CustomAuthorityUtils authorityUtils) {  // CustomAuthorityUtils는 JWT 검증에 성공하면 Authentication 객체에 채울 사용자의 권한을 생성하는 데 사용됩니다.
-        this.jwtTokenizer = jwtTokenizer;
-        this.authorityUtils = authorityUtils;
-    }
+//    public JwtVerificationFilter(JwtTokenizer jwtTokenizer, // JwtTokenizer는 JWT를 검증하고 Claims(토큰에 포함된 정보)를 얻는 데 사용됩니다.
+//                                 CustomAuthorityUtils authorityUtils) {  // CustomAuthorityUtils는 JWT 검증에 성공하면 Authentication 객체에 채울 사용자의 권한을 생성하는 데 사용됩니다.
+//        this.jwtTokenizer = jwtTokenizer;
+//        this.authorityUtils = authorityUtils;
+//    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -64,14 +66,14 @@ public class JwtVerificationFilter extends OncePerRequestFilter {
 
     private Map<String, Object> verifyJws(HttpServletRequest request) {
         String jws = request.getHeader("Authorization").replace("Bearer ", ""); // request의 header에서 JWT를 얻고 있습니다.
-        String base64EncodedSecretKey = jwtTokenizer.encodeBase64SecretKey(jwtTokenizer.getSecretKey()); //JWT 서명(Signature)을 검증하기 위한 Secret Key를 얻습니다.
+        String base64EncodedSecretKey = jwtTokenizer.encodeBase64SecretKey(jwtTokenizer.getSecretKey()); //JWT 서명(Signature)을 검증하기 위한 Secret Key를 얻습니다. / secretKey를 Base64로 인코딩
         Map<String, Object> claims = jwtTokenizer.getClaims(jws, base64EncodedSecretKey).getBody();   //JWT에서 Claims를 파싱 합니다. > 내부적으로 서명검증에 성공했음을 의미.
 
         return claims;
     }
 
-
-    private void setAuthenticationToContext(Map<String, Object> claims) { // claims에서 사용자 정보를 controller로 전송 가능 - dto 이용
+    // claims map에서 사용자 정보 추출 후 Spring Security의 Authentication객체 생성, 이를 SecurityContextHolder에 설정
+    private void setAuthenticationToContext(Map<String, Object> claims) {
         String username = (String) claims.get("username");
         List<GrantedAuthority> authorities = authorityUtils.createAuthorities((List)claims.get("roles"));
         Authentication authentication = new UsernamePasswordAuthenticationToken(username, null, authorities);

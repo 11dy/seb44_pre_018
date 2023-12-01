@@ -96,8 +96,8 @@ public class JwtTokenizer {
         return expiration;
     }
 
-    private Key getKeyFromBase64EncodedKey(String base64EncodedSecretKey) {
-        byte[] keyBytes = Decoders.BASE64.decode(base64EncodedSecretKey);
+    private Key getKeyFromBase64EncodedKey(String base64EncodedSecretKey) { // 주어진 Base64로 인코딩된 문자열에서 Key 객체를 얻어내는 메서드
+        byte[] keyBytes = Decoders.BASE64.decode(base64EncodedSecretKey);// Base64로 인코딩된 문자열을 디코딩하여 바이트 배열로 반환
         Key key = Keys.hmacShaKeyFor(keyBytes);
 
         return key;

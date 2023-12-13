@@ -30,6 +30,11 @@
 
 <br>
 
+## ERD
+
+![image](https://github.com/11dy/seb44_pre_018/assets/96255906/c92b33fc-64ec-45f7-8fe1-8c6dd0118b37)
+
+
 ## ✉️ Commit Message
 
 | 이름     | 내용                                                                  |
